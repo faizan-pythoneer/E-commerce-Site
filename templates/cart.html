@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}My Cart{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='cart.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    {% if cart %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% set grand_total = 0 %}
+                {% for item_id, item in cart.items() %}
+                    {% set item_total = item.price * item.quantity %}
+                    <tr>
+                        <td>{{ item.name }}</td>
+                        <td>${{ item.price }}</td>
+                        <td>
+                            <form action="{{ url_for('update_cart', product_id=item_id) }}" method="POST">
+                                <button type="submit" name="action" value="decrease">-</button>
+                                {{ item.quantity }}
+                                <button type="submit" name="action" value="increase">+</button>
+                            </form>
+                        </td>
+                        <td>${{ item_total }}</td>
+                        <td>
+                            <form action="{{ url_for('remove_from_cart', product_id=item_id) }}" method="POST">
+                                <button type="submit">Remove</button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% set grand_total = grand_total + item_total %}
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="total">
+            <h3>Total: ${{ total }}</h3>
+        </div>
+        <a href="{{ url_for('checkout') }}">Proceed to Checkout</a>
+    {% else %}
+        <p>Your cart is empty.</p>
+        <a href="{{ url_for('home') }}">Continue Shopping</a>
+    {% endif %}
+</div>
+{% endblock %}

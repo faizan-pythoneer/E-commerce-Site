@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Testers{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='testers.css') }}">
+{% endblock %}
+
+{% block content %}
+    <h2>Testers</h2>
+    <img src="{{ url_for('static', filename='testers.webp') }}" alt="Testers Image" style="max-width: 20%;
+     height: auto;padding-left:10px;"></br>
+     <p class="p1">TOP 5 TESTERS</p>
+     <p class="p2">RS.1,250.00 PKR</p>
+     
+    
+{% endblock %}

@@ -1,0 +1,65 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background for contrast */
+}
+
+/* Main Heading Styles */
+h2 {
+    text-align: left; /* Align the heading to the left */
+    color: #333; /* Dark color for the heading */
+    margin-top: 20px; /* Space above the heading */
+    padding-left: 10px; /* Add padding to the left */
+}
+
+/* Image Styles */
+img {
+    display: block; /* Display as block for proper alignment */
+    margin: 20px 0; /* Space above and below the image */
+    max-width: 20%; /* Limit image width */
+    height: auto; /* Maintain aspect ratio */
+    padding-left: 10px; /* Align image to the left */
+    margin-top: 100px;
+}
+
+/* Paragraph Styles */
+.p1, .p2 {
+    text-align: left; /* Align text to the left */
+    padding-left: 10px; /* Add padding to the left */
+    color: #333; /* Dark gray color for the text */
+}
+
+.p1 {
+    font-size: 1.5em; /* Larger font size */
+    margin-top: 10px; /* Space above the paragraph */
+}
+
+.p2 {
+    font-size: 1.2em; /* Slightly smaller font size */
+    color: #007bff; /* Blue color for the price */
+    margin-top: 5px; /* Space above the paragraph */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    img {
+        max-width: 50%; /* Adjust image width for smaller screens */
+        
+    }
+
+    .p1, .p2 {
+        font-size: 1.1em; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    img {
+        max-width: 80%; /* Further adjust image width for mobile devices */
+    }
+
+    .p1, .p2 {
+        font-size: 1em; /* Adjust font size for mobile devices */
+    }
+}

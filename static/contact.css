@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+h2 {
+    color: black;
+    text-align: left;
+    padding-left: 150px;
+    margin-bottom: 50px;
+}
+
+.form-group {
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-start; /* Align items to the start */
+}
+
+.field-container {
+    margin-right: 20px; /* Space between fields */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: lighter;
+    padding-left: 10px; /* Adjusted for better alignment */
+    margin-top: 10px;
+}
+
+/* General styles for all input fields */
+input[type="text"], input[type="email"], textarea {
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 0; /* 0px border radius */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for border color and shadow */
+}
+
+/* Styles for text input */
+input[type="text"], input[type="email"], textarea {
+    background-color: white;
+}
+
+/* Focus styles for all input fields */
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-color: black; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Add shadow on focus */
+}
+
+/* Hover styles for all input fields */
+input[type="text"]:hover, input[type="email"]:hover, textarea:hover {
+    border-color: darkgray; /* Change border color on hover */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+}
+
+/* Error message styling */
+.error {
+    color: red;
+    font-size: 0.9em;
+}
+
+input[type="submit"] {
+    background-color: white;
+    border-color: black;
+    color: black;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: 1px solid black;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Smooth transition for submit button */
+}
+
+input[type="submit"]:hover {
+    border: 2px solid black;
+    background-color: black; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}

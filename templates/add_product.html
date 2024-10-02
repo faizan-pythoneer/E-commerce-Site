@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}ADD NEW PRODUCT{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='add_product.css') }}">
+{% endblock %}
+
+{% block content %}
+<main>
+    <h2>Add New Product</h2>
+    <form method="POST" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        
+        <div>
+            <label for="name">Product Name:</label>
+            {{ form.name(class="form-control") }}
+        </div>
+      
+        <div>
+            <label for="price">Price:</label>
+            {{ form.price(class="form-control") }}
+        </div>
+        <div>
+            <label for="gender">Gender:</label>
+            <select name="gender" class="form-control" required>
+                <option value="men">Men</option>
+                <option value="women">Women</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="images">Product Images:</label>
+            <input type="file" name="images" class="form-control" multiple>  <!-- Directly allow multiple uploads -->
+        </div>
+
+        <div>
+            {{ form.submit(class="btn btn-primary") }}
+        </div>
+    </form>
+
+    {% with messages = get_flashed_messages() %} 
+        {% if messages %} 
+            <ul class="flashes"> 
+            {% for message in messages %} 
+                <li>{{ message }}</li> 
+            {% endfor %} 
+            </ul> 
+        {% endif %} 
+    {% endwith %}
+</main>
+
+{% endblock %}

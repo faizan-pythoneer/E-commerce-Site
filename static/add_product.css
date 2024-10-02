@@ -1,0 +1,103 @@
+/* add_product.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: lighter;
+}
+
+/* Input Styles */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Flash Messages */
+.flashes {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.flashes li {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Footer Styles */
+.footer {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: black;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-contact-link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-contact-link:hover {
+    text-decoration: underline;
+}

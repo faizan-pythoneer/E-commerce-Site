@@ -1,0 +1,78 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background for contrast */
+}
+
+main {
+    padding: 60px 20px; /* Padding to keep content away from the edges */
+}
+
+h1 {
+    text-align: center; /* Center the main heading */
+    margin-bottom: 40px; /* Space below the heading */
+    color: black; /* Color for the heading */
+}
+
+/* Product Container */
+.product-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: space-around; /* Space items evenly */
+}
+
+/* Individual Product Card Styles */
+.product-card {
+    border: 1px solid #ccc; /* Light border for cards */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px;
+    margin: 10px;
+    width: calc(30% - 40px); /* Adjust width based on layout */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    background-color: #fff; /* White background for cards */
+    text-align: center; /* Center text in the card */
+    transition: box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+/* Product Image Styles */
+.product-image {
+    width: 100%; /* Use full width of the card */
+    height: 150px; /* Fixed height for consistency */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    border-radius: 5px; /* Rounded corners for images */
+    margin-bottom: 10px; /* Space below the image */
+}
+
+/* Button Styles */
+.add-to-cart-button {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding around the button */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.add-to-cart-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .product-card {
+        width: calc(45% - 40px); /* Adjust width for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: calc(100% - 40px); /* Full width on mobile devices */
+    }
+}
